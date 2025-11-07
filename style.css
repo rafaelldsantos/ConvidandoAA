@@ -1,0 +1,87 @@
+body {
+  background-color: #87ceeb; /* azul do céu */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+}
+
+#gameArea {
+  width: 900px;
+  height: 500px;
+  border: 2px solid #000;
+  position: relative;
+  overflow: hidden;
+  background-color: #87ceeb;
+}
+
+#cenario {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+  transition: background-image 0.5s ease;
+}
+
+#barco {
+  position: absolute;
+  bottom: 80px;
+  left: 50px;
+  z-index: 1;
+  transition: left 0.1s linear;
+}
+
+#barco img {
+  width: 250px;
+  height: auto;
+}
+
+#dialogo {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  padding: 15px 20px;
+  max-width: 80%;
+  text-align: center;
+  font-family: "Georgia", serif;
+  font-size: 18px;
+  color: #000;
+}
+
+.hidden {
+  display: none;
+}
+
+/* --- Controles (fora do jogo) --- */
+#controles {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 40px;
+  z-index: 999;
+}
+
+#controles button {
+  font-size: 2rem;
+  padding: 10px 25px;
+  border-radius: 10px;
+  border: none;
+  background-color: rgba(255,255,255,0.9);
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+#controles button:active {
+  transform: scale(0.95);
+  background-color: rgba(255,255,255,0.7);
+}
